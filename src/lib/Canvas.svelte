@@ -4,7 +4,33 @@
 	import { TroisProvider } from 'svelte-trois';
 	import { MouseEvents } from 'svelte-trois';
 
+	let castleColor = false;
+
 	const onClick = (e) => {
+		e.stopPropagation();
+		castleColor = !castleColor;
+		confetti();
+	};
+
+	const castle = (e) => {
+		e.stopPropagation();
+		castleColor = !castleColor;
+		confetti();
+	};
+
+	const tower1 = (e) => {
+		e.stopPropagation();
+	};
+
+	const tower2 = (e) => {
+		e.stopPropagation();
+	};
+
+	const tower3 = (e) => {
+		e.stopPropagation();
+	};
+
+	const tower4 = (e) => {
 		e.stopPropagation();
 	};
 </script>
@@ -21,91 +47,97 @@
 			<SC.Primitive object={new THREE.GridHelper(19, 19, 'red', 'red')} position={[0, 0.001, 0]} />
 		</SC.Group>
 
+		{#if !castleColor}
+			<MouseEvents {onClick}>
+				<SC.Mesh
+					geometry={new THREE.BoxGeometry()}
+					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
+					scale={[4, 2, 4]}
+					castShadow
+					position={[0, 0, 0]}
+				/>
+			</MouseEvents>
+		{/if}
+
+		{#if castleColor}
+			<MouseEvents {onClick}>
+				<SC.Mesh
+					geometry={new THREE.BoxGeometry()}
+					material={new THREE.MeshStandardMaterial({ color: 0x023017 })}
+					scale={[4, 2, 4]}
+					castShadow
+					position={[0, 0, 0]}
+				/>
+			</MouseEvents>
+		{/if}
+
 		<SC.Group position={[2, 0, 2]}>
-			<MouseEvents {onClick}>
-				<SC.Mesh
-					geometry={new THREE.CylinderGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[1, 3, 1]}
-					castShadow
-					position={[0, 0, 0]}
-				/>
-				<SC.Mesh
-					geometry={new THREE.ConeGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[1, 1, 1]}
-					castShadow
-					position={[0, 2, 0]}
-				/>
-			</MouseEvents>
-		</SC.Group>
-
-		<SC.Group position={[2, 0, -2]}>
-			<MouseEvents {onClick}>
-				<SC.Mesh
-					geometry={new THREE.CylinderGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[1, 3, 1]}
-					castShadow
-					position={[0, 0, 0]}
-				/>
-				<SC.Mesh
-					geometry={new THREE.ConeGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[1, 1, 1]}
-					castShadow
-					position={[0, 2, 0]}
-				/>
-			</MouseEvents>
-		</SC.Group>
-
-		<SC.Group position={[-2, 0, 2]}>
-			<MouseEvents {onClick}>
-				<SC.Mesh
-					geometry={new THREE.CylinderGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[1, 3, 1]}
-					castShadow
-					position={[0, 0, 0]}
-				/>
-				<SC.Mesh
-					geometry={new THREE.ConeGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[1, 1, 1]}
-					castShadow
-					position={[0, 2, 0]}
-				/>
-			</MouseEvents>
-		</SC.Group>
-
-		<SC.Group position={[-2, 0, -2]}>
-			<MouseEvents {onClick}>
-				<SC.Mesh
-					geometry={new THREE.CylinderGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[1, 3, 1]}
-					castShadow
-					position={[0, 0, 0]}
-				/>
-				<SC.Mesh
-					geometry={new THREE.ConeGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[1, 1, 1]}
-					castShadow
-					position={[0, 2, 0]}
-				/>
-			</MouseEvents>
-		</SC.Group>
-
-		<MouseEvents {onClick}>
 			<SC.Mesh
-				geometry={new THREE.BoxGeometry()}
+				geometry={new THREE.CylinderGeometry()}
 				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-				scale={[4, 2, 4]}
+				scale={[1, 3, 1]}
 				castShadow
 				position={[0, 0, 0]}
 			/>
-		</MouseEvents>
+			<SC.Mesh
+				geometry={new THREE.ConeGeometry()}
+				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
+				scale={[1, 1, 1]}
+				castShadow
+				position={[0, 2, 0]}
+			/>
+		</SC.Group>
+
+		<SC.Group position={[2, 0, -2]}>
+			<SC.Mesh
+				geometry={new THREE.CylinderGeometry()}
+				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
+				scale={[1, 3, 1]}
+				castShadow
+				position={[0, 0, 0]}
+			/>
+			<SC.Mesh
+				geometry={new THREE.ConeGeometry()}
+				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
+				scale={[1, 1, 1]}
+				castShadow
+				position={[0, 2, 0]}
+			/>
+		</SC.Group>
+
+		<SC.Group position={[-2, 0, 2]}>
+			<SC.Mesh
+				geometry={new THREE.CylinderGeometry()}
+				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
+				scale={[1, 3, 1]}
+				castShadow
+				position={[0, 0, 0]}
+			/>
+			<SC.Mesh
+				geometry={new THREE.ConeGeometry()}
+				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
+				scale={[1, 1, 1]}
+				castShadow
+				position={[0, 2, 0]}
+			/>
+		</SC.Group>
+
+		<SC.Group position={[-2, 0, -2]}>
+			<SC.Mesh
+				geometry={new THREE.CylinderGeometry()}
+				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
+				scale={[1, 3, 1]}
+				castShadow
+				position={[0, 0, 0]}
+			/>
+			<SC.Mesh
+				geometry={new THREE.ConeGeometry()}
+				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
+				scale={[1, 1, 1]}
+				castShadow
+				position={[0, 2, 0]}
+			/>
+		</SC.Group>
 
 		<SC.PerspectiveCamera position={[10, 10, 10]} />
 		<SC.OrbitControls enableZoom={true} maxPolarAngle={Math.PI * 0.5} />
