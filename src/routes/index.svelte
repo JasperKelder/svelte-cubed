@@ -1,3 +1,7 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <script>
 	import Canvas from '$lib/Canvas.svelte';
 

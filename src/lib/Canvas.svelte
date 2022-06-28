@@ -52,7 +52,7 @@
 				<SC.Mesh
 					geometry={new THREE.BoxGeometry()}
 					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
-					scale={[4, 2, 4]}
+					scale={[4, 2.5, 4]}
 					castShadow
 					position={[0, 0, 0]}
 				/>
@@ -64,14 +64,14 @@
 				<SC.Mesh
 					geometry={new THREE.BoxGeometry()}
 					material={new THREE.MeshStandardMaterial({ color: 0x219ebc })}
-					scale={[4, 2, 4]}
+					scale={[4, 2.5, 4]}
 					castShadow
 					position={[0, 0, 0]}
 				/>
 			</MouseEvents>
 		{/if}
 
-		<SC.Group position={[2, 0, 2]}>
+		<SC.Group position={[2, 0.5, 2]}>
 			<SC.Mesh
 				geometry={new THREE.CylinderGeometry()}
 				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
@@ -88,7 +88,7 @@
 			/>
 		</SC.Group>
 
-		<SC.Group position={[2, 0, -2]}>
+		<SC.Group position={[2, 0.5, -2]}>
 			<SC.Mesh
 				geometry={new THREE.CylinderGeometry()}
 				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
@@ -105,7 +105,7 @@
 			/>
 		</SC.Group>
 
-		<SC.Group position={[-2, 0, 2]}>
+		<SC.Group position={[-2, 0.5, 2]}>
 			<SC.Mesh
 				geometry={new THREE.CylinderGeometry()}
 				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
@@ -122,7 +122,7 @@
 			/>
 		</SC.Group>
 
-		<SC.Group position={[-2, 0, -2]}>
+		<SC.Group position={[-2, 0.5, -2]}>
 			<SC.Mesh
 				geometry={new THREE.CylinderGeometry()}
 				material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
