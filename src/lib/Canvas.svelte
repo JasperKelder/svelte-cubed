@@ -63,7 +63,7 @@
 			<MouseEvents {onClick}>
 				<SC.Mesh
 					geometry={new THREE.BoxGeometry()}
-					material={new THREE.MeshStandardMaterial({ color: 0x023017 })}
+					material={new THREE.MeshStandardMaterial({ color: 0x219ebc })}
 					scale={[4, 2, 4]}
 					castShadow
 					position={[0, 0, 0]}
