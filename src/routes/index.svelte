@@ -50,7 +50,7 @@
 		position: absolute;
 		top: 10vh;
 		width: 50vw;
-		transition: width 0.6s;
+		transition: width 0.4s;
 	}
 
 	.right {
@@ -80,10 +80,5 @@
 	.openCanvas {
 		width: 0;
 		border: none;
-	}
-
-	.color {
-		color: var(--yellow);
-		border-color: var(--yellow);
 	}
 </style>
