@@ -54,7 +54,7 @@
 					material={new THREE.MeshStandardMaterial({ color: 0x023047 })}
 					scale={[4, 2.5, 4]}
 					castShadow
-					position={[0, 0, 0]}
+					position={[0, 0.2, 0]}
 				/>
 			</MouseEvents>
 		{/if}
@@ -66,7 +66,7 @@
 					material={new THREE.MeshStandardMaterial({ color: 0x219ebc })}
 					scale={[4, 2.5, 4]}
 					castShadow
-					position={[0, 0, 0]}
+					position={[0, 0.2, 0]}
 				/>
 			</MouseEvents>
 		{/if}
