@@ -77,8 +77,16 @@
 		cursor: pointer;
 	}
 
-	h1:hover {
-		color: var(--yellow);
+	@media (hover: hover) {
+		h1:hover {
+			color: var(--yellow);
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		h1 {
+			top: 2vh;
+		}
 	}
 
 	.openCanvas {
