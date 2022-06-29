@@ -67,6 +67,11 @@
 		border-right: 1px solid var(--blue);
 	}
 
+	.openCanvas {
+		width: 0;
+		border: none;
+	}
+
 	h1 {
 		position: absolute;
 		top: 40px;
@@ -87,10 +92,5 @@
 		h1 {
 			top: 2vh;
 		}
-	}
-
-	.openCanvas {
-		width: 0;
-		border: none;
 	}
 </style>

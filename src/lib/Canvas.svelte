@@ -9,29 +9,6 @@
 	const onClick = (e) => {
 		e.stopPropagation();
 		castleColor = !castleColor;
-		confetti();
-	};
-
-	const castle = (e) => {
-		e.stopPropagation();
-		castleColor = !castleColor;
-		confetti();
-	};
-
-	const tower1 = (e) => {
-		e.stopPropagation();
-	};
-
-	const tower2 = (e) => {
-		e.stopPropagation();
-	};
-
-	const tower3 = (e) => {
-		e.stopPropagation();
-	};
-
-	const tower4 = (e) => {
-		e.stopPropagation();
 	};
 </script>
 
